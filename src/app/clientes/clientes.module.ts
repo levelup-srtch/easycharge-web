@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from "@angular/common/http";
-import { NgModule } from "@angular/core";
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
-import { ClienteComponent } from "./cliente/cliente.component";
 import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
 import { FormClienteComponent } from './form-cliente/form-cliente.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
     declarations:[ ClienteComponent, ListaClienteComponent, FormClienteComponent ],

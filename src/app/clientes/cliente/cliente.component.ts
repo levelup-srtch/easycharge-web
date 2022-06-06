@@ -5,6 +5,8 @@ import { Component, Input } from "@angular/core";
     templateUrl: 'cliente.component.html'
 })
 export class ClienteComponent {
+    clientes: any[] = [];
+
     @Input() id='';
     @Input() nome='';
     @Input() cpf='';
