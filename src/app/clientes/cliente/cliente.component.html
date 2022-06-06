@@ -1,0 +1,30 @@
+<h1 class="text-center my-5">Lista de Clientes</h1>
+
+    <div class="card mb-5">
+      <div class="card-body p-1">
+        <table class="table table-striped table-hover pb-0 w-100 h-100">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Local</th>
+              <th scope="col">Renda</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cliente of clientes">
+              <th scope="row" var="id">{{cliente.id}}</th>
+              <td>{{cliente.nome}}</td>
+              <td>{{cliente.cpf}}</td>
+              <td>{{cliente.telefone}}</td>
+              <td>{{cliente.local}}</td>
+              <td>{{cliente.renda}}</td>
+              <td>{{cliente.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
