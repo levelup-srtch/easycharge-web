@@ -1,9 +1,14 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
+
 import { ClienteComponent } from "./cliente/cliente.component";
+import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
+import { FormClienteComponent } from './form-cliente/form-cliente.component';
 
 @NgModule({
-    declarations:[ ClienteComponent ],
-    exports:[ ClienteComponent ]
+    declarations:[ ClienteComponent, ListaClienteComponent, FormClienteComponent ],
+    imports: [ HttpClientModule, CommonModule]
 })
 export class ClientesModule {
     
