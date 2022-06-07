@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { ClienteListaComponent } from './cliente-lista/cliente-lista.component';
 
 @NgModule({
-    declarations:[ ClienteComponent, ListaClienteComponent ],
+    declarations:[ ClienteComponent, ClienteListaComponent ],
     exports: [ ClienteComponent ],
     imports: [ HttpClientModule, CommonModule]
 })

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ListaClienteComponent } from './clientes/lista-cliente/lista-cliente.component';
+import { ClienteListaComponent } from './clientes/cliente-lista/cliente-lista.component';
+
 
 const routes: Routes = [
-    { path: 'clientes/lista', component: ListaClienteComponent },
+    { path: 'clientes/lista', component: ClienteListaComponent },
 ]
 
 @NgModule({

@@ -3,11 +3,11 @@ import { Cliente } from '../cliente/cliente';
 import { ClienteService } from '../cliente/cliente.service';
 
 @Component({
-  selector: 'app-lista-cliente',
-  templateUrl: './lista-cliente.component.html',
-  styleUrls: ['./lista-cliente.component.css']
+  selector: 'ec-cliente-lista',
+  templateUrl: './cliente-lista.component.html',
+  styleUrls: ['./cliente-lista.component.css']
 })
-export class ListaClienteComponent implements OnInit {
+export class ClienteListaComponent implements OnInit {
 
   clientes: Cliente[] = [{
     id: '',
