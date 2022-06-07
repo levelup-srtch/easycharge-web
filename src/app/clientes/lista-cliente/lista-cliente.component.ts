@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { empty } from 'rxjs';
+import { Cliente } from '../cliente/cliente';
 import { ClienteService } from '../cliente/cliente.service';
 
 @Component({
@@ -8,14 +10,22 @@ import { ClienteService } from '../cliente/cliente.service';
 })
 export class ListaClienteComponent implements OnInit {
 
-  clientes: any[] = [];
+  clientes: Cliente[] = [{
+    id: '',
+    nome: '',
+    cpf: '',
+    telefone: '',
+    local: '',
+    renda: '',
+    status: ''
+  }];
   
   constructor(private clienteService: ClienteService){}
   
   ngOnInit(): void {
     this.clienteService
       .listarClientes()
-      .subscribe(clientes => this.clientes = clientes);
+      .subscribe(paginaCliente => this.clientes = paginaCliente.content);
   }
 
 }

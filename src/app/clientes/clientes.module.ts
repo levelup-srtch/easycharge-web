@@ -8,6 +8,7 @@ import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
     declarations:[ ClienteComponent, ListaClienteComponent, FormClienteComponent ],
+    exports: [ ClienteComponent ],
     imports: [ HttpClientModule, CommonModule]
 })
 export class ClientesModule {

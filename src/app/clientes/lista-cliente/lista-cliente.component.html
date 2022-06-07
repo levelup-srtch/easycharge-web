@@ -1,1 +1,11 @@
-<ec-cliente></ec-cliente>
+<tbody>
+    <tr *ngFor="let cliente of clientes">
+        <th scope="row" var="id">{{cliente.id}}</th>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.cpf}}</td>
+        <td>{{cliente.telefone}}</td>
+        <td>{{cliente.local}}</td>
+        <td>{{cliente.renda}}</td>
+        <td>{{cliente.status}}</td>
+    </tr>
+</tbody>
