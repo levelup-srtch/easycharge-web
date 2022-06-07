@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { empty } from 'rxjs';
 import { Cliente } from '../cliente/cliente';
 import { ClienteService } from '../cliente/cliente.service';
 

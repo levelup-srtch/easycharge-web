@@ -5,5 +5,5 @@ export interface Cliente {
     telefone: string;
     local: string;
     renda: any;
-    status: any;
+    status: string;
 }
