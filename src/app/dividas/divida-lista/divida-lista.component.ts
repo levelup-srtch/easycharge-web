@@ -12,16 +12,9 @@ export class DividaListaComponent implements OnInit {
 
   dividas: Divida[] = [];
 
-  constructor(private dividaService: DividaService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getDividas();
-  }
-
-  getDividas() {
-    this.dividaService
-      .getDividas()
-      .subscribe(dividas => this.dividas = dividas);
   }
 
 }

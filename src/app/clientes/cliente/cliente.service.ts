@@ -1,5 +1,5 @@
 
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, retry, throwError } from 'rxjs';
 import { Cliente } from './cliente';
@@ -26,6 +26,17 @@ export class ClienteService {
     getClientes() {
         return this.http
             .get<PaginaCliente>(`${this.api}`)
+            .pipe(
+                retry(2),
+                catchError(this.handleError)
+            );
+    }
+
+    getPaginatedClientes(page: number) {
+        const params = new HttpParams()
+            .append('page', page)
+        return this.http
+            .get<PaginaCliente>(`${this.api}`, { params })
             .pipe(
                 retry(2),
                 catchError(this.handleError)

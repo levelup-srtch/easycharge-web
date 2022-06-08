@@ -11,29 +11,23 @@ import { ClienteService } from '../cliente/cliente.service';
 export class ClienteListaComponent implements OnInit {
 
   clientes: Cliente[] = [];
+  hasMore: boolean = true;
+  currentPage: number = 1;
 
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
-    this.getClientes();
   }
 
-  getClientes() {
+  load() {
     this.clienteService
-      .getClientes()
-      .subscribe(paginaCliente => this.clientes = paginaCliente.content);
-  }
-
-  deleteCliente(cliente: Cliente): void {
-    this.clienteService.deleteCliente(cliente).subscribe(() => {
-      this.getClientes();
-    });
-  }
-
-  atualizaStatusCliente(cliente: Cliente): void {
-    this.clienteService.atualizaStatusCliente(cliente).subscribe(() => {
-      this.getClientes();
-    });
+    .getPaginatedClientes(++this.currentPage)
+    .subscribe((paginaCliente): void => {
+      this.clientes.push(...paginaCliente.content);
+      if(!paginaCliente.content.length){
+        this.hasMore = false;
+      }
+    })
   }
 
 }

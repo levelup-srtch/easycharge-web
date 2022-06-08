@@ -1,0 +1,28 @@
+<table class="table table-striped table-hover pb-0 w-100 h-100">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">ID</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Data de Abertura</th>
+            <th scope="col">CPF do Cliente</th>
+            <th scope="col">Status</th>
+            <th scope="col">Remover</th>
+            <th scope="col">Alterar Divida</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let divida of dividas">
+            <th scope="row" var="id">{{divida.id}}</th>
+            <td>{{divida.valor}}</td>
+            <td>{{divida.dataDeAbertura}}</td>
+            <td>{{divida.cpf}}</td>
+            <td>{{divida.status}}</td>
+            <td>
+                <button class="btn btn-danger w-100 h-100" type="button">Remover</button>
+            </td>
+            <td>
+                <button class="btn btn-primary w-100 h-100" type="button">Alterar Divida</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
