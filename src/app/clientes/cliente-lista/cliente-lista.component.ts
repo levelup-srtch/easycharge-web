@@ -9,15 +9,7 @@ import { ClienteService } from '../cliente/cliente.service';
 })
 export class ClienteListaComponent implements OnInit {
 
-  clientes: Cliente[] = [{
-    id: '',
-    nome: '',
-    cpf: '',
-    telefone: '',
-    local: '',
-    renda: '',
-    status: ''
-  }];
+  clientes: Cliente[] = [];
   
   constructor(private clienteService: ClienteService){}
   

@@ -1,0 +1,17 @@
+body {
+    background-color: gainsboro;
+  }
+
+  header {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  main {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  tr th,
+  td {
+    text-align: center;
+    vertical-align: middle;
+  }
