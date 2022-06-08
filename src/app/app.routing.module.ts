@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundError } from 'rxjs';
 
 import { ClienteFormComponent } from './clientes/cliente-form/cliente-form.component';
 import { ClienteListaComponent } from './clientes/cliente-lista/cliente-lista.component';

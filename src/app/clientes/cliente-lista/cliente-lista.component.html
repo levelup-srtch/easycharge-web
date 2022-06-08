@@ -2,29 +2,29 @@
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between p-3">
             <div class="container-fluid">
-                <a class="navbar-brand fs-3" href="#">EasyCharge</a>
+                <a class="navbar-brand fs-3" href="">EasyCharge</a>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link fs-5 active" aria-current="page" href="/clientes/lista">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-5" aria-current="page" href="#">Dividas</a>
+                            <a class="nav-link fs-5" aria-current="page" href="">Dividas</a>
                         </li>
                     </ul>
                 </div>
-                <a class="nav-item" href="/clientes/formulario"><button type="button"
-                        class="btn btn-outline-light fs-5">Novo
-                        Cliente</button></a>
+                <a class="nav-item" href="/clientes/formulario">
+                    <button type="button" class="btn btn-outline-light fs-5">Novo Cliente</button>
+                </a>
             </div>
         </nav>
     </header>
 
-    <main id="#" class="container-fluid">
+    <main class="container-fluid">
         <h1 class="text-center my-5">Lista de Clientes</h1>
 
         <div class="card mb-5">
-            <div class="card-body px-0 pt-0 pb-1">
+            <div class="card-body px-0 py-0">
                 <table class="table table-striped table-hover pb-0 w-100 h-100">
                     <thead>
                         <tr class="text-center">
@@ -56,7 +56,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a class="btn btn-danger text-white w-100 h-100" role="button" type="submit">Remover</a>
+                                <button class="btn btn-danger text-white w-100 h-100" type="button" (click)="deleteCliente(cliente)">Remover</button>
                             </td>
                             <td>
                                 <a class="btn btn-primary text-white w-100 h-100" role="button">Alterar Cliente</a>
