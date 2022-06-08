@@ -10,6 +10,7 @@ import { PaginaCliente } from './pagina-cliente';
     providedIn: 'root'
 })
 export class ClienteService {
+    
 
     private api = 'http://localhost:8080/api/clientes'
 
@@ -37,6 +38,14 @@ export class ClienteService {
                 retry(1),
                 catchError(this.handleError)
             );
+    }
+    
+    atualizaStatusCliente(cliente: Cliente) {
+      return this.http.put<Cliente>(`${this.api}/status/${cliente.id}`, this.httpOptions)
+      .pipe(
+          retry(1),
+          catchError(this.handleError)
+      );
     }
 
     // Manipulação de erros

@@ -29,4 +29,10 @@ export class ClienteListaComponent implements OnInit {
     });
   }
 
+  atualizaStatusCliente(cliente: Cliente): void {
+    this.clienteService.atualizaStatusCliente(cliente).subscribe(() => {
+      this.getClientes();
+    });
+  }
+
 }

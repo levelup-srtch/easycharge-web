@@ -50,16 +50,16 @@
                             <td>{{cliente.renda}}</td>
                             <td>{{cliente.status}}</td>
                             <td>
-                                <a class="btn btn-secondary text-white w-100 h-100" role="button">
+                                <button class="btn btn-secondary text-white w-100 h-100" type="button" (click)="atualizaStatusCliente(cliente)">
                                     <span *ngIf="cliente.status == 'SUSPENSO'">Ativar</span>
                                     <span *ngIf="cliente.status == 'ATIVO'">Suspender</span>
-                                </a>
+                                </button>
                             </td>
                             <td>
                                 <button class="btn btn-danger text-white w-100 h-100" type="button" (click)="deleteCliente(cliente)">Remover</button>
                             </td>
                             <td>
-                                <a class="btn btn-primary text-white w-100 h-100" role="button">Alterar Cliente</a>
+                                <button class="btn btn-primary text-white w-100 h-100" role="button">Alterar Cliente</button>
                             </td>
                         </tr>
                     </tbody>
