@@ -15,6 +15,4 @@ import { ClienteFormComponent } from './cliente-form/cliente-form.component';
         CommonModule
     ]
 })
-export class ClientesModule {
-
-}
+export class ClientesModule {  }

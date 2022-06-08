@@ -1,9 +1,9 @@
 export interface Cliente {
-    id: any;
+    id: number;
     nome: string;
     cpf: string;
     telefone: string;
     local: string;
-    renda: any;
+    renda: number;
     status: string;
 }

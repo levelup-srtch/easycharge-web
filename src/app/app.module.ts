@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { ClientesModule } from './clientes/clientes.module';
 import { ErrorsModule } from './errors/errors.module';
+import { DividasModule } from './dividas/dividas.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ErrorsModule } from './errors/errors.module';
     BrowserModule,
     AppRoutingModule,
     ClientesModule,
+    DividasModule,
     ErrorsModule
   ],
   providers: [],
