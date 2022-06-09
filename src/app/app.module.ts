@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
+import { ClientesModule } from './components/clientes/clientes.module';
+import { ErrorsModule } from './components/errors/errors.module';
+import { DividasModule } from './components/dividas/dividas.module';
 
-import { ClientesModule } from './clientes/clientes.module';
-import { ErrorsModule } from './errors/errors.module';
-import { DividasModule } from './dividas/dividas.module';
+
 
 @NgModule({
   declarations: [

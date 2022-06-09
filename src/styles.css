@@ -1,18 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-.body--color {
-    background-color: gainsboro;
-  }
+html,
+body {
+  min-height: 100% !important;
+}
 
-  header {
-    font-family: 'Montserrat', sans-serif;
-  }
+body {
+  background-color: gainsboro !important;
+}
 
-  main {
-    font-family: 'Open Sans', sans-serif;
-  }
+header {
+  font-family: 'Montserrat', sans-serif;
+}
 
-  tr th,
-  td {
-    text-align: center;
-    vertical-align: middle;
-  }
+main {
+  font-family: 'Open Sans', sans-serif;
+}
+
+tr th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}

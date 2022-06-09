@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Divida } from './divida';
+
+import { Divida } from '../model/divida';
 
 @Injectable({
   providedIn: 'root'

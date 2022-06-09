@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cliente } from '../../cliente/cliente';
-import { ClienteService } from '../../cliente/cliente.service';
+
+import { Cliente } from 'src/app/model/cliente';
+import { ClienteService } from 'src/app/service/cliente.service';
+
+
 
 @Component({
   selector: 'ec-cliente-lista-tabela',

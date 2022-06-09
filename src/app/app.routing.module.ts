@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ClienteFormComponent } from './clientes/cliente-form/cliente-form.component';
-import { ClienteListaComponent } from './clientes/cliente-lista/cliente-lista.component';
-import { DividaListaComponent } from './dividas/divida-lista/divida-lista.component';
-import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { ClienteFormComponent } from './components/clientes/cliente-form/cliente-form.component';
+import { ClienteListaComponent } from './components/clientes/cliente-lista/cliente-lista.component';
+import { DividaListaComponent } from './components/dividas/divida-lista/divida-lista.component';
+import { NotFoundComponent } from './components/errors/not-found/not-found.component';
 
 
 const routes: Routes = [

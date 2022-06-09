@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Divida } from 'src/app/model/divida';
 
-import { Divida } from '../divida/divida';
-import { DividaService } from '../divida/divida.service';
+
 
 @Component({
   selector: 'ec-divida-lista',

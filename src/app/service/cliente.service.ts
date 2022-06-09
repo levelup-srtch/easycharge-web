@@ -2,9 +2,9 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, retry, throwError } from 'rxjs';
-import { Cliente } from './cliente';
 
-import { PaginaCliente } from './pagina-cliente';
+import { Cliente } from '../model/cliente';
+import { PaginaCliente } from '../model/pagina-cliente';
 
 @Injectable({
     providedIn: 'root'
