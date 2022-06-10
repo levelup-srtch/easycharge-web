@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 import { ClienteListaTabelaComponent } from './cliente-lista/cliente-lista-tabela/cliente-lista-tabela.component';
 import { ClienteListaComponent } from './cliente-lista/cliente-lista.component';
-import { PaginationButtonComponent } from './cliente-lista/pagination-button/pagination-button.component';
+import { HasMoreButtonComponent } from './cliente-lista/hasmore-button/hasmore-button.component';
 
 
 
@@ -12,7 +12,7 @@ import { PaginationButtonComponent } from './cliente-lista/pagination-button/pag
         ClienteListaComponent,
         ClienteFormComponent,
         ClienteListaTabelaComponent,
-        PaginationButtonComponent
+        HasMoreButtonComponent
     ],
     imports: [
         CommonModule

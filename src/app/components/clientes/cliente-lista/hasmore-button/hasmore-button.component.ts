@@ -2,10 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ec-pagination-button',
-  templateUrl: './pagination-button.component.html',
-  styleUrls: ['./pagination-button.component.css']
+  templateUrl: './hasmore-button.component.html',
+  styleUrls: ['./hasmore-button.component.css']
 })
-export class PaginationButtonComponent implements OnInit {
+export class HasMoreButtonComponent implements OnInit {
 
   @Input() hasMore: boolean = false;
 
