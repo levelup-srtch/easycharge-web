@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Cliente } from 'src/app/model/cliente';
 import { ClienteService } from 'src/app/service/cliente.service';
@@ -12,17 +13,20 @@ import { ClienteService } from 'src/app/service/cliente.service';
 })
 export class ClienteListaTabelaComponent implements OnInit {
 
-  @Input() clientes: Cliente[] = []
+  clientes: Cliente[] = []
+  
+  hasMore: boolean = true;
+  currentPage: number = 0;
 
-  constructor(private clienteService: ClienteService) { }
+  constructor(private clienteService: ClienteService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getPaginatedClientes();
+    this.clientes = this.activatedRoute.snapshot.data['clientes']['content'];
   }
 
   getPaginatedClientes() {
     this.clienteService
-      .getClientes()
+      .getPaginatedClientes(this.currentPage)
       .subscribe(paginaCliente => this.clientes = paginaCliente.content);
   }
 
@@ -36,6 +40,17 @@ export class ClienteListaTabelaComponent implements OnInit {
     this.clienteService.atualizaStatusCliente(cliente).subscribe(() => {
       this.getPaginatedClientes();
     });
+  }
+
+  load() {
+    this.clienteService
+    .getPaginatedClientes(++this.currentPage)
+    .subscribe((paginaCliente): void => {
+      this.clientes.push(...paginaCliente.content);
+      if(!paginaCliente.content.length){
+        this.hasMore = false;
+      }
+    })
   }
 
 }

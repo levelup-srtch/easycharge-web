@@ -11,24 +11,11 @@ import { ClienteService } from 'src/app/service/cliente.service';
 })
 export class ClienteListaComponent implements OnInit {
 
-  clientes: Cliente[] = [];
-  hasMore: boolean = true;
-  currentPage: number = 1;
-
-  constructor(private clienteService: ClienteService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  load() {
-    this.clienteService
-    .getPaginatedClientes(++this.currentPage)
-    .subscribe((paginaCliente): void => {
-      this.clientes.push(...paginaCliente.content);
-      if(!paginaCliente.content.length){
-        this.hasMore = false;
-      }
-    })
-  }
+ 
 
 }

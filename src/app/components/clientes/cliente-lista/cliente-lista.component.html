@@ -1,17 +1,5 @@
-<div>
-    <ec-cliente></ec-cliente>
+<main class="container-fluid">
+    <h1 class="text-center my-5">Lista de Clientes</h1>
 
-    <main class="container-fluid">
-        <h1 class="text-center my-5">Lista de Clientes</h1>
-
-        <div class="card mb-5">
-            <div class="card-body px-0 py-0">
-                <ec-cliente-lista-tabela [clientes]="clientes"></ec-cliente-lista-tabela>
-                
-            </div>
-            <div class="card-footer">
-                <ec-pagination-button (click)="load()" [hasMore]="hasMore"></ec-pagination-button>
-              </div>
-        </div>
-    </main>
-</div>
+    <ec-cliente-lista-tabela></ec-cliente-lista-tabela>
+</main>

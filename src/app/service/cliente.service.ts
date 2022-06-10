@@ -23,15 +23,6 @@ export class ClienteService {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     }
 
-    getClientes() {
-        return this.http
-            .get<PaginaCliente>(`${this.api}`)
-            .pipe(
-                retry(2),
-                catchError(this.handleError)
-            );
-    }
-
     getPaginatedClientes(page: number) {
         const params = new HttpParams()
             .append('page', page)
