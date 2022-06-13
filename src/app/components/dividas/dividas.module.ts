@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { DividaListaComponent } from './divida-lista/divida-lista.component';
 import { DividaListaTabelaComponent } from './divida-lista/divida-lista-tabela/divida-lista-tabela.component';
+import { TemplatesModule } from '../templates/templates.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DividaListaTabelaComponent } from './divida-lista/divida-lista-tabela/d
   ],
   imports: [
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    TemplatesModule
   ]
 })
 export class DividasModule { }

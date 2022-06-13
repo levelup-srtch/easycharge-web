@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Divida } from 'src/app/model/divida';
 
 
 
@@ -9,8 +8,6 @@ import { Divida } from 'src/app/model/divida';
   styleUrls: ['./divida-lista.component.css']
 })
 export class DividaListaComponent implements OnInit {
-
-  dividas: Divida[] = [];
 
   constructor() { }
 

@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from 'src/app/model/cliente';
-import { ClienteService } from 'src/app/service/cliente.service';
-
-
 
 @Component({
   selector: 'ec-cliente-lista',

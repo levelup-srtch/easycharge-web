@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
 import { ClienteListaTabelaComponent } from './cliente-lista/cliente-lista-tabela/cliente-lista-tabela.component';
 import { ClienteListaComponent } from './cliente-lista/cliente-lista.component';
-import { HasMoreButtonComponent } from './cliente-lista/hasmore-button/hasmore-button.component';
+import { TemplatesModule } from '../templates/templates.module';
 
 
 
@@ -11,11 +11,11 @@ import { HasMoreButtonComponent } from './cliente-lista/hasmore-button/hasmore-b
     declarations: [
         ClienteListaComponent,
         ClienteFormComponent,
-        ClienteListaTabelaComponent,
-        HasMoreButtonComponent
+        ClienteListaTabelaComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        TemplatesModule
     ]
 })
 export class ClientesModule {  }
