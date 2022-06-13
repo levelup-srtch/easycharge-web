@@ -13,7 +13,6 @@ import { TemplatesModule } from '../templates/templates.module';
     DividaListaTabelaComponent
   ],
   imports: [
-    HttpClientModule,
     CommonModule,
     TemplatesModule
   ]

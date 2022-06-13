@@ -26,18 +26,18 @@
                     <td>{{cliente.renda}}</td>
                     <td>{{cliente.status}}</td>
                     <td>
-                        <button class="btn btn-secondary text-white w-100 h-100" type="button"
+                        <button class="btn btn-secondary text-white w-100" type="button"
                             (click)="atualizaStatusCliente(cliente)">
                             <span *ngIf="cliente.status == 'SUSPENSO'">Ativar</span>
                             <span *ngIf="cliente.status == 'ATIVO'">Suspender</span>
                         </button>
                     </td>
                     <td>
-                        <button class="btn btn-danger text-white w-100 h-100" type="button"
-                            (click)="deleteCliente(cliente)">Remover</button>
+                        <button class="btn btn-danger text-white" type="button"
+                            (click)="deleteCliente(cliente)"><i class="fa fa-trash"></i></button>
                     </td>
                     <td>
-                        <button class="btn btn-primary text-white w-100 h-100" role="button">Alterar Cliente</button>
+                        <button class="btn btn-primary text-white" role="button"><i class="fa fa-pencil"></i></button>
                     </td>
                 </tr>
             </tbody>
