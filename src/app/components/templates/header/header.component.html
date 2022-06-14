@@ -5,10 +5,10 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link fs-5 active" aria-current="page" href="/clientes/lista">Clientes</a>
+                        <a [ngClass]="{'active': path === 'cliente'}" class="nav-link fs-5" aria-current="page" href="/clientes/lista">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5" aria-current="page" href="/dividas/lista">Dividas</a>
+                        <a [ngClass]="{'active': path === 'divida'}" class="nav-link fs-5" aria-current="page" href="/dividas/lista">Dividas</a>
                     </li>
                 </ul>
             </div>
@@ -19,4 +19,3 @@
     </nav>
 </header>
 
-<router-outlet></router-outlet>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ec-cliente-lista',
@@ -7,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteListaComponent implements OnInit {
 
-  constructor() { }
+  path: string = ''
+
+  constructor(activatedRoute: ActivatedRoute) {
+    this.path = activatedRoute.snapshot.url[0].path
+  }
 
   ngOnInit(): void {
   }
 
- 
+
 
 }

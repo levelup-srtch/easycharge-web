@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Divida } from 'src/app/model/divida';
 import { DividaService } from 'src/app/service/divida.service';
 
@@ -16,7 +17,9 @@ export class DividaListaTabelaComponent implements OnInit {
   hasMore: boolean = true;
   currentPage: number = 0;
 
-  constructor(private dividaService: DividaService) { }
+  constructor(private dividaService: DividaService, private titleService: Title) {
+    this.titleService.setTitle('Divida | Lista')
+   }
 
   ngOnInit(): void {
     this.getDividasPaginada();

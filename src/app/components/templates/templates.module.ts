@@ -4,8 +4,6 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from 'src/app/app.routing.module';
 import { HasMoreButtonComponent } from './hasmore-button/hasmore-button.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,

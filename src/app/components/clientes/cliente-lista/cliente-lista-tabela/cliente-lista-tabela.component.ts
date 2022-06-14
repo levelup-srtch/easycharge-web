@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 import { Cliente } from 'src/app/model/cliente';
@@ -18,7 +19,9 @@ export class ClienteListaTabelaComponent implements OnInit {
   hasMore: boolean = true;
   currentPage: number = 0;
 
-  constructor(private clienteService: ClienteService, private activatedRoute: ActivatedRoute) { }
+  constructor(private clienteService: ClienteService, private activatedRoute: ActivatedRoute, private titleService: Title) {
+    this.titleService.setTitle('Cliente | Lista')
+   }
 
   ngOnInit(): void {
     this.clientes = this.activatedRoute.snapshot.data['clientes']['content'];
